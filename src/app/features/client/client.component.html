@@ -1,0 +1,14 @@
+<h1>creer un client</h1>
+
+<form [formGroup]="createClientForm"(ngSubmit)="onSubmit()">
+  <input type="text" placeholder="nom" formControlName="nom">
+  <input type="email" placeholder="email" formControlName="email">
+  <input type="number" placeholder="tel" formControlName="tel">
+  <fieldset formGroupName="adresse">
+    <input type="text" placeholder="rue" formControlName="rue">
+    <input type="text" placeholder="numero" formControlName="numero">
+    <input type="text" placeholder="code postal" formControlName="codePostal">
+    <input type="text" placeholder="ville" formControlName="ville">
+  </fieldset>
+  <button type="submit">soumettre</button>
+</form>

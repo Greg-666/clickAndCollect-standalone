@@ -1,0 +1,20 @@
+<h1> s'enregistrer</h1>
+
+<div class="green">
+  <p>{{message}}</p>
+</div>
+
+<form [formGroup]="registerForm"(ngSubmit)="onSubmit()">
+  <input type="text" placeholder="nom" formControlName="nom">
+  <input type="text" placeholder="prenom" formControlName="prenom">
+  <input type="email" placeholder="email" formControlName="email">
+  <input type="text" placeholder="telephone" formControlName="tel">
+  <input type="password" placeholder="mot de passe" formControlName="email">
+  <fieldset formGroupName="adresse">
+    <input type="text" placeholder="rue" formControlName="rue">
+    <input type="text" placeholder="numero" formControlName="numero">
+    <input type="text" placeholder="code postal" formControlName="codePostal">
+    <input type="text" placeholder="ville" formControlName="ville">
+  </fieldset>
+  <button type="submit">soumettre</button>
+</form>

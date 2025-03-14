@@ -1,0 +1,19 @@
+<h1>produits</h1>
+
+<form [formGroup]="createProduitForm" (ngSubmit)="onSubmit()">
+  <input type="number" placeholder="id" formControlName="id">
+  <input type="text" placeholder="nom" formControlName="nom">
+  <input type="number" placeholder="prix" formControlName="prix">
+
+  <div formArrayName="produits">
+    <div *ngFor="let produit of produits.controls; let i = index">
+      <div [formGroupName]="i">
+        <input [formControlName]="i" placeholder="Entrez une valeur" />
+
+        <button type="button" (click)="removeProduits(i)">Supprimer</button>
+      </div>
+    </div>
+  </div>
+  <button type="button" (click)="addProduits()">Ajouter un élément</button>
+  <button type="submit" [disabled]="createProduitForm.invalid">Soumettre</button>
+</form>

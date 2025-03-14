@@ -1,0 +1,11 @@
+
+  <h1>CONNEXION</h1>
+
+  <form [formGroup]="loginForm"(ngSubmit)="onSubmit()">
+    <input type="text" placeholder="email" formControlName="email">
+    <input type="password" placeholder="mot de passe" formControlPassword="password">
+    <button type="submit">soumettre</button>
+  </form>
+
+
+
